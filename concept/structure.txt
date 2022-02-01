@@ -1,0 +1,11 @@
+
+nav ->
+    categoriesMenu -> guillaume
+    gendersMenu -> guillaume
+    contactLink
+header -> guillaume
+section products -> adam
+section contact -> jaber
+footer
+
+
