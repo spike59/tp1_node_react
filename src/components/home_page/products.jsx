@@ -30,7 +30,7 @@ export const Products = (props)=>{
         }
     let productsFiltered2
     if (category_id !== 0){
-        productsFiltered2 = data.filter(product => {
+        productsFiltered2 = productsFiltered1.filter(product => {
             return (product.category_id === category_id )
         })
     }
