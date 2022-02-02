@@ -1,4 +1,4 @@
-import { MenuLink } from "./menulink"
+import { MenuLink } from "../common/menulink"
 import {Link} from 'react-router-dom';
 export const Nav = () => {
 

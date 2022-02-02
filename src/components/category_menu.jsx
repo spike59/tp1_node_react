@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-import { MenuLink } from "./menulink";
+import { MenuLink } from "./common/menulink";
 export const CategoryMenu =() =>{
 
     const [data, setData] = useState([]);

@@ -1,6 +1,7 @@
-import { Product } from "./product"
+import { Product } from "../business_components/product"
 import { useState,useEffect } from "react";
-export const Products = ()=>{
+export const Products = (props)=>{
+    const {gender_id,category_id} = props
     const [data, setData] = useState([]);
     
     useEffect(() => {
@@ -19,18 +20,40 @@ export const Products = ()=>{
           // make sure to catch any error
           .catch(console.error);;
       }, [])
-  
-      
+    let productsFiltered1
+    if (gender_id !== 0)
+        productsFiltered1 = data.filter(product => {
+            return (product.gender_id === gender_id )
+        })
+        else{
+            productsFiltered1 =data;
+        }
+    let productsFiltered2
+    if (category_id !== 0){
+        productsFiltered2 = data.filter(product => {
+            return (product.category_id === category_id )
+        })
+    }
+    else
+    {
+        productsFiltered2 =productsFiltered1;
+    }
+    
 
-      let products = data.map(product =>{
+    let products = productsFiltered2.map(product =>{
         return <Product 
             key={product.id} 
+            id={product.id}
             title={product.title} 
             description={product.description}
             price = {product.price}
             image ={product.image}
+            gender_id = {product.gender_id}
+            category_id = {product.category_id}
+            card
         />
-      })  
+    })
+
     
     
     return(

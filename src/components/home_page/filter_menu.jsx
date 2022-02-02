@@ -1,12 +1,14 @@
-import { Button } from "./button"
-import { FilterLink } from "./filterLink";
+import { Button } from "../common/button"
+import { FilterLink } from "../common/filterLink";
 import { useEffect,useState } from "react";
-export const FilterMenu =() =>{
+export const FilterMenu =(props) =>{
   
+  const {gender_id,category_id,genderOnClick,categoryOnClick} = props
   const [genders, setGenders] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [gender_id,setGenderId] = useState(1)
-  const [category_id,setCategoryId] = useState(1)
+
+  // const [gender_id,setGenderId] = useState(1)
+  // const [category_id,setCategoryId] = useState(1)
   // const [test,setTest] = useState("blabla")
 
   useEffect(() => {
@@ -51,22 +53,16 @@ export const FilterMenu =() =>{
         
     }, [])
 
-    const genderOnClick = (e,id)=> {
-        e.preventDefault()
-        console.log("clic",id)
-        setGenderId(id)
-    }
-    const categoryOnClick = (e,id)=> {
-        e.preventDefault()
-        setCategoryId(id)
-    }
+    
     let genderLinks = genders.map(gender =>{
         return <FilterLink key={gender.id} name={gender.title} onClick={genderOnClick} value={gender.id}/>
     })
+    genderLinks.push(<FilterLink key="0" name="tout" onClick={genderOnClick} value={0}/>)
+
     let CategoriesLinks = categories.map(category =>{
         return <FilterLink key={category.id} name={category.title} onClick={categoryOnClick} value={category.id}/>
     })
-
+    CategoriesLinks.push(<FilterLink key="0" name="tout" onClick={categoryOnClick} value={0}/>)
   return(
     <div>
         <ul className="nav justify-content-center">

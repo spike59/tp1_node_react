@@ -1,4 +1,4 @@
-import { MenuLink } from "./menulink"
+import { MenuLink } from "./common/menulink"
 import { useEffect,useState } from "react";
 export const GenderMenu =() =>{
   

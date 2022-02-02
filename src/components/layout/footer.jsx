@@ -1,4 +1,4 @@
-import { MenuLink } from "./menulink"
+import { MenuLink } from "../common/menulink"
 
 export const Footer = () => {
 
