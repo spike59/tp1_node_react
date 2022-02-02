@@ -14,12 +14,12 @@ export const FilterMenu =() =>{
     // const categoryUri = 'http://localhost/shop_data/category.json'
 
     const fetchGenders = async () => {
-      const in_genders = await fetch('http://localhost/shop_data/gender.json');
+      const in_genders = await fetch('data/gender.json');
       const json = await in_genders.json();
       setGenders(json);
     }
     const fetchCategories = async () => {
-        const in_categories = await fetch('http://localhost/shop_data/category.json');
+        const in_categories = await fetch('data/category.json');
         const json = await in_categories.json();
         setCategories(json);
     }

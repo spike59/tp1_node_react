@@ -9,7 +9,7 @@ export const CategoryMenu =() =>{
       // declare the async data fetching function
       const fetchData = async () => {
         // get the data from the api
-        const in_data = await fetch('http://localhost/shop_data/category.json');
+        const in_data = await fetch('data/category.json');
         // convert the data to json
         const json = await in_data.json();
         // set state with the result
