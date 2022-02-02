@@ -6,16 +6,16 @@ import {Footer} from './components/footer';
 import { GenderMenu } from './components/gender_menu';
 import { CategoryMenu } from './components/category_menu';
 import {Contact} from './components/contact';
-
+import {FilterMenu} from './components/filter_menu';
 function App() {
   return (
-    
     <div className="App">
       <p>bonjour</p>
           <Nav/>
-          <Header/>  
-          <GenderMenu/>
-          <CategoryMenu/>
+          <Header/>
+          <FilterMenu gender_id="1" category_id="1" />
+          {/* <GenderMenu/>
+          <CategoryMenu/> */}
           <Products/>
           {/* <Contact/> */}
           <Footer/>
