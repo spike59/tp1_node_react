@@ -8,4 +8,14 @@ section products -> adam
 section contact -> jaber
 footer
 
-
+pages:
+    HomePage
+        nav
+        header
+        products
+        footer
+    ContactPage
+        nav
+        header
+        contact
+        footer
