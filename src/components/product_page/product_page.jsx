@@ -24,16 +24,16 @@ export function ProductPage() {
       // make sure to catch any error
       .catch(console.error);;
   }, [])
-  console.log("id",id)
-  console.log("data",data)
+//   console.log("id",id)
+//   console.log("data",data)
   let product = data.find(product=>{
     return product.id.toString() === id
   })
-  console.log("product",product)
+  //console.log("product",product)
   if (product ){
 
     
-    console.log("product",product)
+    //console.log("product",product)
     return (
       <>
         <Nav/>

@@ -11,7 +11,7 @@ export function HomePage() {
   
     const genderOnClick = (e,id)=> {
       e.preventDefault()
-      console.log("clic",id)
+      //console.log("clic",id)
       setGenderId(id)
     }
     const categoryOnClick = (e,id)=> {
