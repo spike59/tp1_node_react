@@ -10,7 +10,7 @@ export const Nav = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li className="nav-item"><Link className="nav-link active" aria-current="page" to="/">Home</Link></li>
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Genres</a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <MenuLink name="hommes"/>
@@ -23,7 +23,7 @@ export const Nav = () => {
                                 <MenuLink name="t-shirts"/>
                                 <MenuLink name="pantalons"/>
                             </ul>
-                        </li>
+                        </li> */}
                         <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
                     </ul>
                     <form className="d-flex">

@@ -19,3 +19,10 @@ pages:
         header
         contact
         footer
+
+images 
+    adam hommes 1-25
+    guillaume n femmes 26-50
+    jaber  enfants 51-75
+    guillaume bébés 76-100
+    

@@ -1,4 +1,5 @@
-import { Product } from "../business_components/product"
+import { ProductComponent } from "../../business_components/product/productComponent"
+import {Product} from '../../../models/product.model'
 import { useState,useEffect } from "react";
 export const Products = (props)=>{
     const {gender_id,category_id} = props
@@ -7,12 +8,15 @@ export const Products = (props)=>{
     useEffect(() => {
         // declare the async data fetching function
         const fetchData = async () => {
+        const data = Product.from(await (await fetch('data/product.json')).json())
           // get the data from the api
-          const in_data = await fetch('data/product.json');
-          // convert the data to json
-          const json = await in_data.json();
+        //   const in_data = await fetch('data/product.json');
+        //   // convert the data to json
+        //   const json = await in_data.json();
+        //   const data = Product.from(json)
+        //   console.log(data)
           // set state with the result
-          setData(json);
+        setData(data);
         }
   
         // call the function
@@ -38,21 +42,29 @@ export const Products = (props)=>{
     {
         productsFiltered2 =productsFiltered1;
     }
-    
 
+    
     let products = productsFiltered2.map(product =>{
-        return <Product 
-            key={product.id} 
-            id={product.id}
-            title={product.title} 
-            description={product.description}
-            price = {product.price}
-            image ={product.image}
-            gender_id = {product.gender_id}
-            category_id = {product.category_id}
-            card
+        product.key = product.id
+        product.display = "card"
+        return <ProductComponent 
+            {...product}
         />
-    })
+    })    
+
+    // let products = productsFiltered2.map(product =>{
+    //     return <Product 
+    //         key={product.id} 
+    //         id={product.id}
+    //         title={product.title} 
+    //         description={product.description}
+    //         price = {product.price}
+    //         image ={product.image}
+    //         gender_id = {product.gender_id}
+    //         category_id = {product.category_id}
+    //         card
+    //     />
+    // })
 
     
     

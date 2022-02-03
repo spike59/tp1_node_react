@@ -1,8 +1,8 @@
-import {Nav} from '../layout/nav';
-import {Header} from '../layout/header';
+import {Nav} from '../../layout/nav';
+import {Header} from '../../layout/header';
 import {FilterMenu} from './filter_menu';
 import {Products} from './products';
-import {Footer} from '../layout/footer';
+import {Footer} from '../../layout/footer';
 
 import { useState } from 'react';
 export function HomePage() {

@@ -1,7 +1,7 @@
-import {Nav} from '../layout/nav';
-import {Header} from '../layout/header';
-import {Product} from '../business_components/product';
-import {Footer} from '../layout/footer';
+import {Nav} from '../../layout/nav';
+import {Header} from '../../layout/header';
+import {ProductComponent} from '../../business_components/product/productComponent';
+import {Footer} from '../../layout/footer';
 import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -38,7 +38,7 @@ export function ProductPage() {
       <>
         <Nav/>
         <Header/>
-        <Product 
+        <ProductComponent 
               id={product.id}
               title={product.title} 
               description={product.description}
