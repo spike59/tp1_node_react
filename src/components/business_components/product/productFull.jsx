@@ -18,7 +18,7 @@ export const ProductFull = (props) => {
                     <img src={img_url} alt="" />
                 </div>
                 <div className="col-6">
-                    <div>{description}</div>
+                    <pre>{description}</pre>
                     <div>{price}</div>
                     <a href="#" className="btn btn-outline-dark"> add to cart</a>
                 </div>
