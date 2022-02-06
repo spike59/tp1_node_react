@@ -224,231 +224,31 @@
         "gender_id":1,
         "category_id":5
     },
-    {
-        "id": 26,
-        "title": "Potatoes - Yukon Gold, 80 Ct",
-        "description": 26,
-        "price": "€98,57",
-        "image": "http://dummyimage.com/138x100.png/cc0000/ffffff",
-        "gender_id": 2,
-        "category_id": 5
-    },
-    {
-        "id": 27,
-        "title": "Cheese - Augre Des Champs",
-        "description": 27,
-        "price": "€46,90",
-        "image": "http://dummyimage.com/207x100.png/cc0000/ffffff",
-        "gender_id": 4,
-        "category_id": 4
-    },
-    {
-        "id": 28,
-        "title": "Foam Tray S2",
-        "description": 28,
-        "price": "€52,84",
-        "image": "http://dummyimage.com/140x100.png/5fa2dd/ffffff",
-        "gender_id": 4,
-        "category_id": 3
-    },
-    {
-        "id": 29,
-        "title": "Cleaner - Pine Sol",
-        "description": 29,
-        "price": "€91,42",
-        "image": "http://dummyimage.com/195x100.png/cc0000/ffffff",
-        "gender_id": 4,
-        "category_id": 1
-    },
-    {
-        "id": 30,
-        "title": "Tea - Darjeeling, Azzura",
-        "description": 30,
-        "price": "€148,85",
-        "image": "http://dummyimage.com/241x100.png/dddddd/000000",
-        "gender_id": 3,
-        "category_id": 2
-    },
-    {
-        "id": 31,
-        "title": "Lamb - Whole, Fresh",
-        "description": 31,
-        "price": "€65,60",
-        "image": "http://dummyimage.com/219x100.png/cc0000/ffffff",
-        "gender_id": 4,
-        "category_id": 4
-    },
-    {
-        "id": 32,
-        "title": "Muffins - Assorted",
-        "description": 32,
-        "price": "€178,87",
-        "image": "http://dummyimage.com/124x100.png/dddddd/000000",
-        "gender_id": 1,
-        "category_id": 1
-    },
-    {
-        "id": 33,
-        "title": "Wine - Magnotta - Pinot Gris Sr",
-        "description": 33,
-        "price": "€18,69",
-        "image": "http://dummyimage.com/243x100.png/dddddd/000000",
-        "gender_id": 2,
-        "category_id": 2
-    },
-    {
-        "id": 34,
-        "title": "Soup - Campbells Beef Strogonoff",
-        "description": 34,
-        "price": "€145,80",
-        "image": "http://dummyimage.com/231x100.png/dddddd/000000",
-        "gender_id": 3,
-        "category_id": 2
-    },
-    {
-        "id": 35,
-        "title": "Nut - Almond, Blanched, Sliced",
-        "description": 35,
-        "price": "€165,30",
-        "image": "http://dummyimage.com/188x100.png/dddddd/000000",
-        "gender_id": 3,
-        "category_id": 1
-    },
-    {
-        "id": 36,
-        "title": "Cheese Cheddar Processed",
-        "description": 36,
-        "price": "€56,57",
-        "image": "http://dummyimage.com/104x100.png/ff4444/ffffff",
-        "gender_id": 3,
-        "category_id": 2
-    },
-    {
-        "id": 37,
-        "title": "Capon - Whole",
-        "description": 37,
-        "price": "€186,48",
-        "image": "http://dummyimage.com/123x100.png/dddddd/000000",
-        "gender_id": 4,
-        "category_id": 3
-    },
-    {
-        "id": 38,
-        "title": "Dc - Sakura Fu",
-        "description": 38,
-        "price": "€161,41",
-        "image": "http://dummyimage.com/111x100.png/dddddd/000000",
-        "gender_id": 1,
-        "category_id": 2
-    },
-    {
-        "id": 39,
-        "title": "Beef - Shank",
-        "description": 39,
-        "price": "€168,18",
-        "image": "http://dummyimage.com/244x100.png/cc0000/ffffff",
-        "gender_id": 1,
-        "category_id": 6
-    },
-    {
-        "id": 40,
-        "title": "French Pastries",
-        "description": 40,
-        "price": "€60,16",
-        "image": "http://dummyimage.com/123x100.png/cc0000/ffffff",
-        "gender_id": 1,
-        "category_id": 6
-    },
-    {
-        "id": 41,
-        "title": "Versatainer Nc - 9388",
-        "description": 41,
-        "price": "€35,49",
-        "image": "http://dummyimage.com/197x100.png/5fa2dd/ffffff",
-        "gender_id": 4,
-        "category_id": 1
-    },
-    {
-        "id": 42,
-        "title": "Tomatoes - Orange",
-        "description": 42,
-        "price": "€147,84",
-        "image": "http://dummyimage.com/147x100.png/ff4444/ffffff",
-        "gender_id": 3,
-        "category_id": 5
-    },
-    {
-        "id": 43,
-        "title": "Pasta - Agnolotti - Butternut",
-        "description": 43,
-        "price": "€68,72",
-        "image": "http://dummyimage.com/124x100.png/ff4444/ffffff",
-        "gender_id": 1,
-        "category_id": 6
-    },
-    {
-        "id": 44,
-        "title": "Wine - Hardys Bankside Shiraz",
-        "description": 44,
-        "price": "€134,79",
-        "image": "http://dummyimage.com/182x100.png/cc0000/ffffff",
-        "gender_id": 4,
-        "category_id": 6
-    },
-    {
-        "id": 45,
-        "title": "Oil - Safflower",
-        "description": 45,
-        "price": "€139,43",
-        "image": "http://dummyimage.com/240x100.png/5fa2dd/ffffff",
-        "gender_id": 2,
-        "category_id": 5
-    },
-    {
-        "id": 46,
-        "title": "Sauce - Soya, Dark",
-        "description": 46,
-        "price": "€113,88",
-        "image": "http://dummyimage.com/209x100.png/5fa2dd/ffffff",
-        "gender_id": 1,
-        "category_id": 4
-    },
-    {
-        "id": 47,
-        "title": "Olive - Spread Tapenade",
-        "description": 47,
-        "price": "€127,78",
-        "image": "http://dummyimage.com/182x100.png/cc0000/ffffff",
-        "gender_id": 2,
-        "category_id": 3
-    },
-    {
-        "id": 48,
-        "title": "Rice Wine - Aji Mirin",
-        "description": 48,
-        "price": "€11,71",
-        "image": "http://dummyimage.com/234x100.png/cc0000/ffffff",
-        "gender_id": 1,
-        "category_id": 5
-    },
-    {
-        "id": 49,
-        "title": "Island Oasis - Lemonade",
-        "description": 49,
-        "price": "€136,41",
-        "image": "http://dummyimage.com/149x100.png/ff4444/ffffff",
-        "gender_id": 2,
-        "category_id": 4
-    },
-    {
-        "id": 50,
-        "title": "Bread - English Muffin",
-        "description": 50,
-        "price": "€114,98",
-        "image": "http://dummyimage.com/221x100.png/cc0000/ffffff",
-        "gender_id": 4,
-        "category_id": 5
-    },
+    {"id":26,"title":"Pantalon battle","description":"Véritable seconde peau, le pantalon battle est à la fois tendance et super agréable à porter.","price":19.24,"image":"product-26.jpg","gender_id":2,"category_id":1},
+{"id":27,"title":"Pantalon large","description":"Misez sur ce pantalon large, résolument tendance. On aime sa coupe inspirée du vestiaire masculin","price":49.99,"image":"product-27.jpg","gender_id":2,"category_id":1},
+{"id":28,"title":"Pantalon large, taille haute","description":"Pantalon large, taille haute taupe VILA","price":37.49,"image":"product-28.jpg","gender_id":2,"category_id":1},
+{"id":29,"title":"Pantalon large, taille haute","description":"Inspiré des années 80 et pile dans la tendance, le pantalon large est de retour","price":23.99,"image":"product-29.jpg","gender_id":2,"category_id":1},
+{"id":30,"title":"Pull col rond, manches bouffantes ","description":"Ce pull col rond adopte des manches longues bouffantes, pour un look tendance.  ","price":27.49,"image":"product-30.jpg","gender_id":2,"category_id":3},
+{"id":31,"title":"Pull marinière coton Bio","description":"La marinière, pièce iconique par excellence, a une place privilégiée dans votre garde-robe. ","price":34.99,"image":"product-31.jpg","gender_id":2,"category_id":3},
+{"id":32,"title":"Pull coupe ajustée","description":"manches gonflantes - MOLLY BRACKEN","price":21.48,"image":"product-32.jpg","gender_id":2,"category_id":3},
+{"id":33,"title":"Pull col rond motif ajouré","description":"Pull col rond motif ajouré - JDY","price":26.99,"image":"product-33.jpg","gender_id":2,"category_id":3},
+{"id":34,"title":"Body col V, manches courtes","description":"Tendance, le body s'invite dans nos dressings. Il dessine et met en valeur la silhouette.","price":8.00,"image":"product-34.jpg","gender_id":2,"category_id":2},
+{"id":35,"title":"Tshirt manches longues détail zip","description":"Tshirt manches longues détail zip - MORGAN","price":30.00,"image":"product-35.jpg","gender_id":2,"category_id":2},
+{"id":36,"title":"T-shirt col rond boutonné","description":"T-shirt col rond boutonné, manches courtes - ESPRIT","price":18.00,"image":"product-36.jpg","gender_id":2,"category_id":2},
+{"id":37,"title":"T-shirt col v","description":"Jersey tout doux, encolure v et bas de manches bordés d'un biais dentelle, coupe droit.","price":29.99,"image":"product-37.jpg","gender_id":2,"category_id":2},
+{"id":38,"title":"Bottes talon large","description":"Bottes talon large, détail boucle noir","price":47.99,"image":"product-38.jpg","gender_id":2,"category_id":4},
+{"id":39,"title":"Bottes cuir à talon large","description":"Bottes cuir à talon large beige foncé","price":169.99,"image":"product-39.jpg","gender_id":2,"category_id":4},
+{"id":40,"title":"Bottes cavalières","description":"Bottes en similicuir, décorées d'une semelle débordante à bout carré.","price":47.50,"image":"product-40.jpg","gender_id":2,"category_id":4},
+{"id":41,"title":"Bottes","description":"Place du Marais vous présente la paire de cuissardes à ajouter à votre dressing","price":132.30,"image":"product-41.jpg","gender_id":2,"category_id":4},
+{"id":42,"title":"Shorty en dentelle","description":"Shorty en dentelle noir ","price":14.44,"image":"product-42.jpg","gender_id":2,"category_id":5},
+{"id":43,"title":"Culottes maxi","description":"Caractéristiques de ces culottes maxis femme en coton élasthanne SECRET","price":8.75,"image":"product-43.jpg","gender_id":2,"category_id":5},
+{"id":44,"title":"Culotte en tulle ","description":"Culotte en tulle imprimé fleuri imprimé fleuri YSÉ","price":10.45,"image":"product-44.jpg","gender_id":2,"category_id":5},
+{"id":45,"title":"Soutien-gorge emboîtant tout dentelle","description":"La ligne TATOO s’habille d’une dentelle effet jacquard motif fleurs particulièrement raffinée et se dote de finitions à bords plats.","price":28.49,"image":"product-45.jpg","gender_id":2,"category_id":5},
+{"id":46,"title":"Sac Trotteur","description":"Sac trotteur smart noir/gris/poudre ","price":49.00,"image":"product-46.jpg","gender_id":2,"category_id":6},
+{"id":47,"title":"Sac en cuir rachel","description":"Sac en cuir rachel noir JONAK","price":62.50,"image":"product-47.jpg","gender_id":2,"category_id":6},
+{"id":48,"title":"Sac gibecière en cuir","description":"Sac gibecière en cuir kaki/noir ","price":79.99,"image":"product-48.jpg","gender_id":2,"category_id":6},
+{"id":49,"title":"Sac à bandoulière ","description":"Sac à bandoulière 1440 small messenger noir","price":145.00,"image":"product-49.jpg","gender_id":2,"category_id":6},
+{"id":50,"title":"Sac en cuir rabat","description":"Sac en cuir rabat imprimé python noir/imprimé python","price":89.99,"image":"product-50.jpg","gender_id":2,"category_id":6},
     {
         "id": 51,
         "title": "Jogging en molleton",

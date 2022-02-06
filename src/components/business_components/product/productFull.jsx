@@ -14,19 +14,20 @@ export const ProductFull = (props) => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-6">
+                <div className="col-5">
                     <img src={img_url} alt="" />
                 </div>
-                <div className="col-6">
-                    <pre>{description}</pre>
+                <div className="col-2"></div>
+                <div className="col-5">
+                    <pre className="desc">{description}</pre>
                     <div>{price}</div>
                     <a href="#" className="btn btn-outline-dark"> add to cart</a>
                 </div>
             </div>
-
-            <p>{gender_id} - {category_id}</p>
-            <Link to="/" className="btn btn-outline-dark mt-auto">retour</Link>
-
+            <div className="row">
+                <p>{gender_id} - {category_id}</p>
+                <Link to="/" className="btn btn-outline-dark mt-auto">retour</Link>
+            </div>
         </div>
     )
 
