@@ -1,7 +1,7 @@
-export class BaseModel {
+export class BaseModel{
 
-    static relations = [];
-
+    id = 0;
+    
     assign = (props) => {
         for (let key in props) {
             if (!this.hasOwnProperty(key)) {
@@ -11,25 +11,71 @@ export class BaseModel {
             if(key.endsWith('_date')){
                 props[key] = new Date(props[key])
             }
-            // if(key.endsWith('_id')){
-            //     if (!this.hasOwnProperty("hasOne")){
-            //         this.hasOne = [];
-            //         let modelName = key.replace("_id","");
-            //         let maj = modelName[0].toUpperCase() + modelName.substring(1);
-            //         this.hasOne.push(maj);
-            //     }
-
-            // }
         }
         Object.assign(this, props);
     }
-    static from(data){
-        if (Array.isArray(data)){
-            return data.map(item => new this(item) )
+
+    //hasOneToo
+    hasOneTooRelations = {};
+    hasOneToo = (model, 
+                name = model.toLowerCase(),
+                fk = this.constructor.name.toLowerCase() + "_id") => 
+        {      
+            this.hasOneTooRelations[model] = {fk, name};
+            return this;
         }
-        else if (typeof data == "object" ){
-            return new this(data)
-        }
-        return
+
+    //hasOne
+    hasOneRelations = {};
+    hasOne = (model, name = model.toLowerCase(), fk = model.toLowerCase() + "_id") => {
+        this.hasOneRelations[model] = {fk, name};
+        return this;
     }
-};
+
+    //hasMany
+    hasManyRelations = {};
+    hasMany = (model, 
+                name = model.toLowerCase()+ "List",
+                fk = this.constructor.name.toLowerCase() + "_id") => 
+        {      
+            this.hasManyRelations[model] = {fk, name};
+            return this;
+        }
+
+    //hasManyThrough
+    hasManyThroughRelations = {};
+    hasManyThrough = (model,
+                      through,
+                      name = model.toLowerCase() + "List",
+                      fk_model = model.toLowerCase() + "_id",
+                      fk = this.constructor.name.toLowerCase() + "_id") => 
+        {
+            this.hasManyThroughRelations[model] = {through, fk_model, fk, name};
+            return this;
+        }
+
+    get properties(){
+        return JSON.tryParse(JSON.stringify(this));
+    }
+
+    toString(){
+        let str = this.constructor.name + "{\n"; 
+        for(let key in this.properties){
+            let value = this[key];
+            str+=`${key}: ${value}\n`;
+        }
+        return str + "}";
+    }
+
+    static from(obj){
+        if(Array.isArray(obj)){
+            return obj.map(item => new this(item));
+        }
+        else if(typeof obj == "object"){
+            return new this(obj);
+        }
+        return;
+    }
+
+    
+}

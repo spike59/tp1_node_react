@@ -8,7 +8,7 @@ export const Products = (props)=>{
     useEffect(() => {
         // declare the async data fetching function
         const fetchData = async () => {
-        const data = Product.from(await (await fetch('data/product.json')).json())
+        const data = Product.from(await (await fetch('http://localhost:5000/product')).json())
           // get the data from the api
         //   const in_data = await fetch('data/product.json');
         //   // convert the data to json

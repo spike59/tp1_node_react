@@ -1,12 +1,15 @@
 import { BaseModel } from "./baseModel.model.js";
-export class Gender extends BaseModel {
+
+export class Gender extends BaseModel{
 
     constructor(props){
         super(props);
         this.assign(props);
+        this.hasMany("Product");
     }
 
-    //propriétés
-    id = 0;
     title = "";
-};
+    description = "";
+    image = "";
+
+}

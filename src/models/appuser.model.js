@@ -1,16 +1,16 @@
 import { BaseModel } from "./baseModel.model.js";
 
-export class Command extends BaseModel{
+export class Appuser extends BaseModel{
 
     constructor(props){
         super(props);
         this.assign(props);
         this.hasOne("Customer");
-        this.hasManyThrough("Product", "Command_product");
     }
 
-    numero = "";
-    validation_date = new Date();
+    login = "";
+    password = "";
+    is_active = false;
     customer_id = 0;
 
 }
