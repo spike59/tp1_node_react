@@ -1,4 +1,4 @@
-import { ProductComponent } from "../../business_components/product/productComponent"
+import { ProductComponent } from "./productComponent"
 import {Product} from '../../../models/product.model'
 import { useState,useEffect } from "react";
 export const Products = (props)=>{

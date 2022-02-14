@@ -25,6 +25,7 @@ export const Nav = () => {
                             </ul>
                         </li> */}
                         <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>
                     </ul>
                     <form className="d-flex">
                         <button className="btn btn-outline-dark" type="submit">

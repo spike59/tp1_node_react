@@ -5,7 +5,7 @@ import {Products} from '../../business_components/product/products';
 import {Footer} from '../../layout/footer';
 
 import { useState } from 'react';
-export function HomePage() {
+export function AdminPage() {
     const [gender_id,setGenderId] = useState(0)
     const [category_id,setCategoryId] = useState(0)
   
