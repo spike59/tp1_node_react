@@ -6,7 +6,7 @@ import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 export function UsersComponent() {
-  let { id } = useParams();
+  
   const [data, setData] = useState([]);
   useEffect(() => {
     // declare the async data fetching function
@@ -25,7 +25,8 @@ export function UsersComponent() {
       .catch(console.error);;
   }, [])
 
-  if (UsersComponent.lenght >0 ){
+console.log("data",data);
+  if (data.lenght >0 ){
     const users = data.map(user => {
         return (<p>email {user.email} - role {user.role}</p>)
     })

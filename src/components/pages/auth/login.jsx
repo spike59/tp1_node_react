@@ -1,12 +1,29 @@
+import { useNavigate } from "react-router-dom";
 import GenericForm from "../../common/generic_form";
 import GenericInput from "../../common/generic_input";
+//import { UserComponent } from "./UserComponent";
+
+
+
 
 export const Login = () => {
-  
+  let navigate = useNavigate();
   const handleSubmit = async (response) => {
-    let resp = await response.text();
-    console.log("resp!",resp);
-    return resp;
+    let resp = await response.text()
+    let json = JSON.parse(resp);
+      console.log("resp! user ",json);
+      if (json && json.token){
+        console.log("user authentifié!")
+        let token = json.token;
+        //document.cookie = `token=${token}`;
+        localStorage.setItem("token", JSON.stringify(token));
+        navigate(`/user/${json.id}`);
+      }
+      else{
+        console.log("authentification failed!!",resp)
+      }
+      return resp;
+    
   };
 
   return (
