@@ -15,7 +15,7 @@ const GenericInput = (props) => {
     pattern,
     ...rest
   } = props;
-  console.log("add props",type);
+  //console.log("add props",type);
   return (
     <div {...rest}>
       <label htmlFor={name} className="form-label">

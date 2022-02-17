@@ -6,7 +6,7 @@ import GenericInput from "../../common/generic_input";
 
 
 
-export const Login = () => {
+export const Register = () => {
   let navigate = useNavigate();
   const handleSubmit = async (response) => {
     let resp = await response.text()
@@ -29,7 +29,7 @@ export const Login = () => {
   const mailPatern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
   return (
       <GenericForm
-        endpoint="http://localhost:5000/auth/login"
+        endpoint="http://localhost:5000/auth/register"
         submitButtonText="Envoyer"
         callback={handleSubmit}
         validation={true}

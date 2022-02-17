@@ -29,6 +29,9 @@ export const Nav = () => {
                         <li className="nav-item"><Link className="nav-link" to="/user">users</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/user/1">user1</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/user/2">user2</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/logout">logout</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/product/1">p1</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/product/2">p2</Link></li>
                     </ul>
                     <form className="d-flex">
                         <button className="btn btn-outline-dark" type="submit">

@@ -5,6 +5,7 @@ import { ProductPage } from './components/pages/product/product_page';
 import { UsersComponent} from './components/pages/admin/users_component';
 import { UserComponent } from './components/pages/auth/UserComponent'
 import { LoginPage } from './components/pages/auth/login_page';
+import { LogoutPage } from './components/pages/auth/logout_page';
 import { AdminPage } from './components/pages/admin/admin_page';
 import {Routes,Route} from 'react-router-dom';
 
@@ -16,9 +17,11 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/logout" element={<LogoutPage />} />
         <Route path="/user" element={<UsersComponent />} />
-        <Route path="/user/:id" element={<UserComponent />} />
-        <Route path="/admin" element={<AdminPage />} />
+        <Route exact path="/user/:id" element={<UserComponent />} />
+        <Route path="/admin" element={<AdminPage role="Admin"/>} />
+        <Route path="/dataAdmin" element={<AdminPage role="DataAdmin"/>} />
       </Routes>
     </div>
   );
