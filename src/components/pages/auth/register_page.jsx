@@ -3,7 +3,7 @@ import {Header} from '../../layout/header';
 import {Footer} from '../../layout/footer';
 import { Register } from './register';
 
-export function LoginPage() {
+export function RegisterPage() {
     return (
       <>
         <Nav/>
