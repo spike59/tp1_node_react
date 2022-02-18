@@ -3,9 +3,6 @@ import GenericForm from "../../common/generic_form";
 import GenericInput from "../../common/generic_input";
 //import { UserComponent } from "./UserComponent";
 
-
-
-
 export const Register = () => {
   let navigate = useNavigate();
   const handleSubmit = async (response) => {

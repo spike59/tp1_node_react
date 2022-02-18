@@ -29,6 +29,7 @@ export function UserComponent() {
         method: "get",
         headers: my_headers
       }
+      
       // get the data from the api
       const in_data = await fetch(`http://localhost:5000/auth/${currentUser}`, fetchParams);
       // convert the data to json
