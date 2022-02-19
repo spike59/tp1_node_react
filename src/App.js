@@ -8,6 +8,8 @@ import { RegisterPage } from './components/pages/auth/register_page';
 import { LoginPage } from './components/pages/auth/login_page';
 import { LogoutPage } from './components/pages/auth/logout_page';
 import { AdminPage } from './components/pages/admin/admin_page';
+import { ValidationPage } from './components/pages/auth/validationPage';
+import { ErrorPage } from './components/pages/error_page';
 import {Routes,Route} from 'react-router-dom';
 
 function App() {
@@ -24,8 +26,8 @@ function App() {
         <Route exact path="/user/:id" element={<UserComponent />} />
         <Route path="/admin" element={<AdminPage role="Admin"/>} />
         <Route path="/dataAdmin" element={<AdminPage role="DataAdmin"/>} />
-        {/* <Route path="/dataAdmin" element={<AdminPage role="DataAdmin"/>} />
-        <Route path="/dataAdmin" element={<AdminPage role="DataAdmin"/>} /> */}
+        <Route path="/account/validation" element={<ValidationPage />} />
+        <Route path="*" element={<ErrorPage/>} />
       </Routes>
     </div>
   );
