@@ -5,13 +5,8 @@ import { Register } from './register';
 
 export function RegisterPage() {
     return (
-      <>
-        <Nav/>
-        <Header/>
         <div className="container">
             <Register/>
         </div>
-        <Footer/>
-      </>
     );
   }

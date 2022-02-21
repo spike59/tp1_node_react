@@ -26,6 +26,7 @@ export function UsersComponent() {
       if (in_data.status == "200")
       {
         setStatus("ok");
+        //status = "ok";
         json = await in_data.json();
         setData(json);
       }
@@ -47,20 +48,15 @@ export function UsersComponent() {
       .catch(console.error);;
   }, [])
 
-  console.log("data0",data);
-  console.log("l",data.length);
-  console.log("data l>0",data.length > 0);
+  //console.log("data0",data);
+  //console.log("l",data.length);
+  //console.log("data l>0",data.length > 0);
   switch (status)
   {
 
     case "loading":
       return(
-        <>
-          <Nav/>
-          <Header/>
-              loading...
-          <Footer/>
-        </>
+             <p>loading...</p> 
       );
     
     case "ok":
@@ -72,43 +68,23 @@ export function UsersComponent() {
         
         //console.log("product",product)
         return (
-          <>
-            <Nav/>
-            <Header/>
-                {users}
-            <Footer/>
-          </>
+               <> {users}</>
         );
     
       }
       else
       {
         return (
-          <>
-          <Nav/>
-          <Header/>
           <p>produit non trouvé...</p>
-          <Footer/>
-        </>
         )
       }
     case "unauthorized":
       return(
-        <>
-          <Nav/>
-          <Header/>
             <p>accés refusé</p>
-          <Footer/>
-        </>
       )
     default:
       return(
-        <>
-          <Nav/>
-          <Header/>
             <p>erreur</p>
-          <Footer/>
-        </>
       )
   }
 

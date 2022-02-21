@@ -4,13 +4,8 @@ import {Footer} from '../layout/footer';
 
 export function ErrorPage() {
     return (
-      <>
-        <Nav/>
-        <Header/>
         <div className="container">
-            <p>error page</p>
+            <p>(public) error page</p>
         </div>
-        <Footer/>
-      </>
     );
   }

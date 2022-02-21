@@ -5,13 +5,9 @@ import {Footer} from '../../layout/footer';
 
 export function LoginPage() {
     return (
-      <>
-        <Nav/>
-        <Header/>
+
         <div className="container">
             <Login/>
         </div>
-        <Footer/>
-      </>
     );
   }

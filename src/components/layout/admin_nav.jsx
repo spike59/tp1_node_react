@@ -4,9 +4,8 @@ import { useContext } from 'react';
 //import {ProfilContext} from '../../utils/profil-context';
 export const Nav = (props) => {
     console.log("nav props",props);
-    const {profil} = props;
-    console.log("nav profil",profil);
-    const {user} = profil;
+    const {user} = props;
+    console.log("nav profil",user);
     //const profil = useContext(App.ProfilContext);
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,18 +16,23 @@ export const Nav = (props) => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li className="nav-item"><Link className="nav-link active" aria-current="page" to="/">Home</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
+
                         <li className="nav-item"><Link className="nav-link" to="/admin/user">admin</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/user/1">user1</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/user/2">user2</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/test/test_screen">testscreen</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/profil">profil</Link></li>
+
+
                     </ul>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li>{user.name}</li>
                         {user.id ?
-                            <li className="nav-item"><Link className="nav-link" to="/logout">logout {user.name}</Link></li>:
-                            <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>
-                        }            
+                        <li className="nav-item"><Link className="nav-link" to="/logout">logout</Link></li>:
+                        <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>
+                        }
+                        
+                        
+                        
+                        
                     </ul>
                     <form className="d-flex">
                         <button className="btn btn-outline-dark" type="submit">

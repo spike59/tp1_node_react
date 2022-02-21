@@ -2,12 +2,15 @@ import { Nav } from '../../layout/nav';
 import { Header } from '../../layout/header';
 //import { ProductComponent } from '../../business_components/product/productComponent';
 import { Footer } from '../../layout/footer';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { ProfilContext } from '../../../utils/profil-context';
 
 export function UserComponent() {
+  const {profil,setProfil} = useContext(ProfilContext);
+  console.log("current profil",profil);
   let { id } = useParams();
-  console.log("Changement user !",id);
+  //console.log("Changement user !",id);
   const [currentUser,setCurrentUser] = useState(0);
   if (currentUser !== id){
     console.log("set new user",id);
@@ -18,10 +21,10 @@ export function UserComponent() {
   const [status, setStatus] = useState("loading");
 
   useEffect(() => {
-
+    
     // declare the async data fetching function
     const fetchData = async () => {
-      console.log("fetching");
+      //console.log("fetching");
       let token = JSON.parse(localStorage.getItem('token'));
       let my_headers = new Headers();
       my_headers.append("Authorization", 'Bearer ' + token)
@@ -33,11 +36,13 @@ export function UserComponent() {
       // get the data from the api
       const in_data = await fetch(`http://localhost:5000/auth/${currentUser}`, fetchParams);
       // convert the data to json
-      console.log("indata headers", in_data.status);
+      //console.log("indata headers", in_data.status);
       let json={};
       if (in_data.status.toString() === "200") {
         setStatus("authorized");
         json = await in_data.json();
+        //console.log("json data",json);
+        
       }
       else if (in_data.status.toString() === "401") {
         setStatus("unauthorized");
@@ -48,7 +53,8 @@ export function UserComponent() {
 
       // set state with the result
       setData(json);
-      console.log("json result apres fetch user id")
+
+      //console.log("json result apres fetch user id")
     }
 
     // call the function
@@ -57,16 +63,21 @@ export function UserComponent() {
       .catch(console.error);;
   }, [currentUser]);
 
+  // if (status == "authorized" && data){
+  //   setProfil({
+  //     "user":{
+  //       "name":data.email,
+  //       "id":data.id,
+  //       "role":data.role
+  //     }
+  //   })
+  // }
+
   console.log("status!!",status);
   switch (status) {
     case "loading":     
       return (
-        <>
-          <Nav />
-          <Header />
           <p>loading</p>
-          <Footer />
-        </>
       );
 
 
@@ -77,16 +88,11 @@ export function UserComponent() {
         if (user) {
           //console.log("product",product)
           return (
-            <>
-              <Nav />
-              <Header />
               <div>
                 <h2>Profil utilisateur</h2>
                 <p>id={user.id}</p>
                 <p>email={user.email} </p>
               </div>
-              <Footer />
-            </>
           );
         }
 
@@ -96,24 +102,14 @@ export function UserComponent() {
     case "unauthorized":
       {
         return (
-          <>
-            <Nav />
-            <Header />
             <p>accés refusé</p>
-            <Footer />
-          </>
         )
       }
 
     case "error":
       {
         return (
-          <>
-            <Nav />
-            <Header />
             <p>erreur user non trouvé...</p>
-            <Footer />
-          </>
         )
       }
 

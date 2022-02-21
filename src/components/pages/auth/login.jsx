@@ -1,23 +1,34 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GenericForm from "../../common/generic_form";
 import GenericInput from "../../common/generic_input";
 //import { UserComponent } from "./UserComponent";
-
+// import { ProfilContext } from "../../../utils/profil-context";
+// import { useContext } from "react";
 
 
 
 export const Login = () => {
   let navigate = useNavigate();
+  // const {profil,setProfil} = useContext(ProfilContext);
+  // setProfil({
+  //   "user":{
+  //     "name":"admin",
+  //     "role":"Admin"
+  //   }
+  // })
   const handleSubmit = async (response) => {
     let resp = await response.text()
     let json = JSON.parse(resp);
       console.log("resp! user ",json);
       if (json && json.token){
-        console.log("user authentifié!")
+        console.log("user authentifié!");
+        
         let token = json.token;
         //document.cookie = `token=${token}`;
         localStorage.setItem("token", JSON.stringify(token));
-        navigate(`/user/${json.id}`);
+        localStorage.setItem("user_id", JSON.stringify(json.id));
+        //navigate(`/user/${json.id}`);
+        navigate('/profil');
       }
       else{
         console.log("authentification failed!!",resp)
@@ -52,6 +63,7 @@ export const Login = () => {
           required={true}
           invalidText="Saisir un mot de passe"
         />
+        <Link className="nav-link" to="/register">register</Link>
       </GenericForm>
   );
 };

@@ -1,8 +1,5 @@
-import {Nav} from '../../layout/nav';
-import {Header} from '../../layout/header';
 import {FilterMenu} from '../../business_components/product/filter_menu';
 import {Products} from '../../business_components/product/products';
-import {Footer} from '../../layout/footer';
 
 import { useState } from 'react';
 export function HomePage() {
@@ -21,21 +18,16 @@ export function HomePage() {
 
     return (
       <>
-        <Nav/>
-        <Header/>
         <FilterMenu 
           gender_id={gender_id} 
           genderOnClick={genderOnClick} 
           category_id={category_id} 
           categoryOnClick = {categoryOnClick}
           />
-        {/* <GenderMenu/>
-        <CategoryMenu/> */}
         <Products
           gender_id={gender_id}
           category_id={category_id}  
         />
-        <Footer/>
       </>
     );
   }

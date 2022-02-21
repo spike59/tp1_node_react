@@ -1,9 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import GenericForm from "../../common/generic_form";
 import GenericInput from "../../common/generic_input";
 //import { UserComponent } from "./UserComponent";
 
 export const Register = () => {
+  const [status,setStatus] =useState("init");
+
   let navigate = useNavigate();
   const handleSubmit = async (response) => {
     let resp = await response.text()
@@ -13,8 +16,13 @@ export const Register = () => {
         console.log("user authentifié!")
         let token = json.token;
         //document.cookie = `token=${token}`;
-        localStorage.setItem("token", JSON.stringify(token));
-        navigate(`/user/${json.id}`);
+        //localStorage.setItem("token", JSON.stringify(token));
+        //navigate(`/user/${json.id}`);
+        setTimeout(()=>{
+          navigate('../account/verif_mail?t=' + token);
+          //navigate('../account/validation?t=' + token);
+        },3000)
+        
       }
       else{
         console.log("authentification failed!!",resp)
@@ -49,6 +57,14 @@ export const Register = () => {
           required={true}
           invalidText="Saisir un mot de passe"
         />
+        <GenericInput
+          className="mb-3"
+          name="password"
+          labelText="Password"
+          required={true}
+          invalidText="Saisir un mot de passe"
+        />
+        <Link className="nav-link" to="/login">déja un compte ? se connecter</Link>
       </GenericForm>
   );
 };

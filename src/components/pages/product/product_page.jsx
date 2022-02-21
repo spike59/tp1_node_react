@@ -35,9 +35,6 @@ export function ProductPage() {
     
     //console.log("product",product)
     return (
-      <>
-        <Nav/>
-        <Header/>
         <ProductComponent 
               id={product.id}
               title={product.title} 
@@ -47,8 +44,6 @@ export function ProductPage() {
               gender_id = {product.gender_id}
               category_id = {product.category_id}
           />
-        <Footer/>
-      </>
     );
   }else{
     return (
